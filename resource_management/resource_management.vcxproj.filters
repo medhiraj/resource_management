@@ -8,5 +8,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\AResource.cpp" />
+    <ClCompile Include="src\AUser.cpp" />
+    <ClCompile Include="src\CGeneralResource.cpp" />
+    <ClCompile Include="src\CGeneralUser.cpp" />
+    <ClCompile Include="ResourceFactory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AResource.h" />
+    <ClInclude Include="include\AUser.h" />
+    <ClInclude Include="include\CGeneralResource.h" />
+    <ClInclude Include="include\CGeneralUser.h" />
+    <ClInclude Include="include\AbstractFactory.h" />
+    <ClInclude Include="ResourceFactory.h" />
   </ItemGroup>
 </Project>

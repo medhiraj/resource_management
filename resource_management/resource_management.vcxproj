@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,7 +140,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\ResourceFactory.cpp" />
+    <ClCompile Include="src\AResource.cpp" />
+    <ClCompile Include="src\AUser.cpp" />
+    <ClCompile Include="src\CGeneralResource.cpp" />
+    <ClCompile Include="src\CGeneralUser.cpp" />
     <ClCompile Include="src\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AbstractFactory.h" />
+    <ClInclude Include="include\AResource.h" />
+    <ClInclude Include="include\AUser.h" />
+    <ClInclude Include="include\CGeneralResource.h" />
+    <ClInclude Include="include\CGeneralUser.h" />
+    <ClInclude Include="include\ResourceFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
