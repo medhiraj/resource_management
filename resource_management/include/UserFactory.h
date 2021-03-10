@@ -1,10 +1,10 @@
 #pragma once
-#include "AbstractFactory.h"
+#include "AbstractUserFactory.h"
 #include "CGeneralUser.h"
 class UserFactory :
-    public AbstractFactory
+    public AbstractUserFactory
 {
-
-    CGeneralUser* CreateUser() const override;
+public:
+    virtual AUser* CreateUser(std::string username, unsigned int noOfResource) const override;
 };
 

@@ -1,6 +1,6 @@
-#include "..\include\UserFactory.h"
+#include "../include/UserFactory.h"
 
-CGeneralUser* UserFactory::CreateUser() const
+AUser* UserFactory::CreateUser(std::string username, unsigned int noOfResource) const
 {
-	return new CGeneralUser();
+	return new CGeneralUser(username,noOfResource);
 }

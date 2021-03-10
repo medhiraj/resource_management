@@ -1,5 +1,6 @@
-#include "..\include\CGeneralResource.h"
+#include "../include/CGeneralResource.h"
 
 CGeneralResource::~CGeneralResource()
 {
 }
+

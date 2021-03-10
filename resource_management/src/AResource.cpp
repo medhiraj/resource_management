@@ -1,4 +1,4 @@
-#include "..\include\AResource.h"
+#include "../include/AResource.h"
 #include "time.h"
 #include "string"
 
@@ -33,6 +33,11 @@ double AResource::GetElappsedSceond()
 AResource::AResource()
 {
 	resourceID = GenerateUniqueResourceID();
+}
+
+bool AResource::operator==(AResource& rhs)
+{	
+	return this->resourceID == rhs.resourceID ? true : false;	
 }
 
 AResource::~AResource()

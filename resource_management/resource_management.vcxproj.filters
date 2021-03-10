@@ -12,14 +12,22 @@
     <ClCompile Include="src\AUser.cpp" />
     <ClCompile Include="src\CGeneralResource.cpp" />
     <ClCompile Include="src\CGeneralUser.cpp" />
-    <ClCompile Include="ResourceFactory.cpp" />
+    <ClCompile Include="src\ResourceFactory.cpp" />
+    <ClCompile Include="src\AbstractUserFactory.cpp" />
+    <ClCompile Include="src\CResourceManager.cpp" />
+    <ClCompile Include="src\UserFactory.cpp" />
+    <ClCompile Include="CUserManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AResource.h" />
     <ClInclude Include="include\AUser.h" />
     <ClInclude Include="include\CGeneralResource.h" />
     <ClInclude Include="include\CGeneralUser.h" />
-    <ClInclude Include="include\AbstractFactory.h" />
-    <ClInclude Include="ResourceFactory.h" />
+    <ClInclude Include="include\ResourceFactory.h" />
+    <ClInclude Include="include\AbstractResourceFactory.h" />
+    <ClInclude Include="include\AbstractUserFactory.h" />
+    <ClInclude Include="include\CResourceManager.h" />
+    <ClInclude Include="include\UserFactory.h" />
+    <ClInclude Include="CUserManager.h" />
   </ItemGroup>
 </Project>

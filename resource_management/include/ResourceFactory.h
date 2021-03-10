@@ -1,8 +1,8 @@
 #pragma once
-#include "AbstractFactory.h"
+#include "AbstractResourceFactory.h"
 #include "CGeneralResource.h"
 class ResourceFactory :
-    public AbstractFactory
+    public AbstractResourceFactory
 {
 public:
     CGeneralResource* CreateResource() const override;

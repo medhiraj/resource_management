@@ -12,6 +12,7 @@ class AResource
 	double GetElappsedSceond();
 public:
 	AResource();
+	virtual bool operator== (AResource& rhs);
 	virtual ~AResource();
 
 };
