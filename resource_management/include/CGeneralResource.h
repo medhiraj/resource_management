@@ -8,7 +8,7 @@
 class CGeneralResource :
     public AResource
 {
-    virtual ~CGeneralResource();
-
+    public:
+    virtual ~CGeneralResource(); 
 };
 

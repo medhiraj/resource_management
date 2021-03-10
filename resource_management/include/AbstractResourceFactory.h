@@ -1,8 +1,7 @@
 #pragma once
 #include "AResource.h"
-#include "AUser.h"
-class AbstractFactory {
+
+class AbstractResourceFactory {
 public:
 	virtual AResource* CreateResource() const = 0;
-	virtual AUser* CreateUser() const = 0;
 };

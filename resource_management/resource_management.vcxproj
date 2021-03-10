@@ -140,20 +140,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\CUserManager.cpp" />
+    <ClCompile Include="src\AbstractUserFactory.cpp" />
+    <ClCompile Include="src\CResourceManager.cpp" />
     <ClCompile Include="src\ResourceFactory.cpp" />
     <ClCompile Include="src\AResource.cpp" />
     <ClCompile Include="src\AUser.cpp" />
     <ClCompile Include="src\CGeneralResource.cpp" />
     <ClCompile Include="src\CGeneralUser.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\UserFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\AbstractFactory.h" />
+    <ClInclude Include="include\CUserManager.h" />
+    <ClInclude Include="include\AbstractUserFactory.h" />
+    <ClInclude Include="include\CResourceManager.h" />
+    <ClInclude Include="include\AbstractResourceFactory.h" />
     <ClInclude Include="include\AResource.h" />
     <ClInclude Include="include\AUser.h" />
     <ClInclude Include="include\CGeneralResource.h" />
     <ClInclude Include="include\CGeneralUser.h" />
     <ClInclude Include="include\ResourceFactory.h" />
+    <ClInclude Include="include\UserFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

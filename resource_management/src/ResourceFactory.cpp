@@ -1,4 +1,4 @@
-#include "..\include\ResourceFactory.h"
+#include "../include/ResourceFactory.h"
 
 CGeneralResource* ResourceFactory::CreateResource() const
 {
