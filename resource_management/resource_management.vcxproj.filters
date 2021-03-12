@@ -16,7 +16,8 @@
     <ClCompile Include="src\AbstractUserFactory.cpp" />
     <ClCompile Include="src\CResourceManager.cpp" />
     <ClCompile Include="src\UserFactory.cpp" />
-    <ClCompile Include="CUserManager.cpp" />
+    <ClCompile Include="src\CUserManager.cpp" />
+    <ClCompile Include="src\CCustomeException.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AResource.h" />
@@ -28,6 +29,7 @@
     <ClInclude Include="include\AbstractUserFactory.h" />
     <ClInclude Include="include\CResourceManager.h" />
     <ClInclude Include="include\UserFactory.h" />
-    <ClInclude Include="CUserManager.h" />
+    <ClInclude Include="include\CUserManager.h" />
+    <ClInclude Include="include\CCustomeException.h" />
   </ItemGroup>
 </Project>

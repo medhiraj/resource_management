@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\CCustomeException.cpp" />
     <ClCompile Include="src\CUserManager.cpp" />
     <ClCompile Include="src\AbstractUserFactory.cpp" />
     <ClCompile Include="src\CResourceManager.cpp" />
@@ -152,6 +153,7 @@
     <ClCompile Include="src\UserFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\CCustomeException.h" />
     <ClInclude Include="include\CUserManager.h" />
     <ClInclude Include="include\AbstractUserFactory.h" />
     <ClInclude Include="include\CResourceManager.h" />
