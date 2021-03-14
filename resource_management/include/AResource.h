@@ -19,6 +19,7 @@ public:
 	virtual bool operator== (AResource& rhs);
 	std::string getResourceID();
 	AUser* get_user_info();
+	void set_user_info(AUser*);
 	virtual ~AResource();
 
 };

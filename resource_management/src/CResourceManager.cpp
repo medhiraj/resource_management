@@ -38,10 +38,11 @@ std::string CResourceManager::Allocate(std::string user_name)
             if (user)
             {
                 if (user->ReserverResource(it->first))
-                {                    
+                {
+                    it->second->set_user_info(user);
                     auto new_it = reserved_resourcePool.insert(std::make_pair(it->first, it->second));
                     resourcePool.erase(it);
-                    return it->first;
+                    return new_it.first->first;
                 }
                 else
                 {
@@ -79,6 +80,7 @@ bool CResourceManager::Deallocate(std::string resource_id)
         {
             if (user->FreeResource(resource_id))
             {                
+                it->second->set_user_info(nullptr);
                 auto new_it = resourcePool.insert(std::make_pair(it->first, it->second));
                 reserved_resourcePool.erase(it);
                 isResourceFree = true;
@@ -136,6 +138,8 @@ const std::list<std::string>& CResourceManager::List(std::string user_name)
 
 const std::list<user_resource_info>& CResourceManager::List()
 {    
+    if (user_resource_info_list.size() > 0)
+        user_resource_info_list.clear();
     for (auto it = reserved_resourcePool.begin(); it != reserved_resourcePool.end(); ++it)
     {
         user_resource_info_list.push_front(user_resource_info(it->second->get_user_info()->getUserName(), it->first));
