@@ -43,6 +43,11 @@ AUser* AResource::get_user_info()
 	return user_info;
 }
 
+void AResource::set_user_info(AUser* user)
+{
+	user_info = user;
+}
+
 std::string AResource::getResourceID()
 {
 	return resourceID;

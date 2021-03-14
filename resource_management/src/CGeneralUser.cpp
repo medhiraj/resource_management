@@ -70,8 +70,11 @@ CGeneralUser::~CGeneralUser()
 
 const std::list<std::string>& CGeneralUser::List()
 {
-	
+
+	if (list.size() > 0)
+		list.clear();
 	std::unordered_set<std::string>& allocatedResourceId = getallocatedResourceIdSet();
-	std::copy(allocatedResourceId.begin(), allocatedResourceId.end(), list.begin());
+	std::copy(allocatedResourceId.begin(), allocatedResourceId.end(), std::back_inserter(list));
+
 	return list;
 }
