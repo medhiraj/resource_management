@@ -1,4 +1,4 @@
-#include "../include/CGeneralResource.h"
+#include "CGeneralResource.h"
 
 CGeneralResource::~CGeneralResource()
 {

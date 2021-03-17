@@ -12,10 +12,10 @@
  *
  */
 #include <iostream>
-#include "..\include\CResourceManager.h"
-#include "..\include\CUserManager.h"
-#include "..\include\ResourceFactory.h"
-#include "..\include\UserFactory.h"
+#include "CResourceManager.h"
+#include "CUserManager.h"
+#include "ResourceFactory.h"
+#include "UserFactory.h"
 #include "string"
 
 using namespace std;
