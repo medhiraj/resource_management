@@ -1,0 +1,3 @@
+[submodule "resource_management/lib/googletest"]
+	path = resource_management/lib/googletest
+	url = https://github.com/google/googletest.git
