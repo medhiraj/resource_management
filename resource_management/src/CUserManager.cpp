@@ -1,4 +1,4 @@
-#include "..\include\CUserManager.h"
+#include "CUserManager.h"
 
 AUser* CUserManager::CreateUser(const AbstractUserFactory& factory, std::string username, unsigned int noOfResource)
 {

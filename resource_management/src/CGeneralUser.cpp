@@ -1,5 +1,5 @@
-#include "../include/CGeneralUser.h"
-#include "../include/CCustomeException.h"
+#include "CGeneralUser.h"
+#include "CCustomeException.h"
 #include "string"
 #include "algorithm"
 CGeneralUser::CGeneralUser(std::string name, unsigned int noOfResource) : AUser(name,noOfResource)

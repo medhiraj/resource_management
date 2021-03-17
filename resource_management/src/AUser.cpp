@@ -1,4 +1,4 @@
-#include "../include/AUser.h"
+#include "AUser.h"
 
 AUser::AUser(std::string name, unsigned int numberOfResources)
 {

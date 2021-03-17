@@ -1,5 +1,5 @@
-#include "../include/CResourceManager.h"
-#include "../include/CCustomeException.h"
+#include "CResourceManager.h"
+#include "CCustomeException.h"
 
 
 AResource* CResourceManager::CreateResource(const AbstractResourceFactory& factory)

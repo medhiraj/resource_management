@@ -1,4 +1,4 @@
-#include "../include/UserFactory.h"
+#include "UserFactory.h"
 
 AUser* UserFactory::CreateUser(std::string username, unsigned int noOfResource) const
 {

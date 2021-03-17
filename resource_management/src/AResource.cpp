@@ -1,4 +1,4 @@
-#include "../include/AResource.h"
+#include "AResource.h"
 #include "string"
 #include <sstream>
 #include <random>
