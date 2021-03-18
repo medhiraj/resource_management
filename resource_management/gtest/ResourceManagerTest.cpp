@@ -132,16 +132,16 @@ TEST(ResourceManager, deallocate) {
        try
        {
           isSuccess   = resource_manager.Deallocate(resourceId_A2[0]);
-          EXPECT_EQ(true,false);
+          EXPECT_EQ(isSuccess,true);
+          isSuccess   = resource_manager.Deallocate(resourceId_A2[0]);
        }
        catch(const CCustomeexception &e)
        {
-            std::string msg ="No user is associated with resource id ";
-            msg.append(resourceId_A2[0]);
-            std::cout<<"Debug pt in catch "<<std::endl;
-            //EXPECT_STREQ(msg.c_str(),e.what());
-            //EXPECT_EQ(isSuccess,false);
-            //EXPECT_EQ(true,Dalse);
+            std::string msg ="Associated  resource with "+ resourceId_A2[0] + " is either free or incorrect";
+            EXPECT_STREQ(msg.c_str(),e.what());
+            isSuccess   = resource_manager.Deallocate(resourceId_A2[1]);
+            EXPECT_EQ(isSuccess,true);
+
        }
        catch(const std::exception& e)
        {
@@ -154,20 +154,4 @@ TEST(ResourceManager, deallocate) {
         //std::cerr << e.what() << '\n';
         EXPECT_ANY_THROW(e.what());
     }
-
-    std::string resourceId_A1[1];
-    /*try
-    {
-       resourceId_A1[0] = resource_manager.Allocate(username[1]);
-    }
-    catch(const CCustomeexception& e)
-    {
-        //std::cerr << e.what() << '\n';
-        EXPECT_STREQ("Resource not available to allocate",e.what());        
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-        EXPECT_ANY_THROW(e.what());
-    }*/
 }
