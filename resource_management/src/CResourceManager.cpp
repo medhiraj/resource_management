@@ -153,3 +153,12 @@ user_resource_info::user_resource_info(std::string userName, std::string resourc
     user_name.assign(userName);
     resource_id.assign(resourceId);
 }
+
+std::string user_resource_info::getUserName()
+{
+    return user_name;
+}
+std::string user_resource_info::getResource_ID()
+{
+    return resource_id;
+}

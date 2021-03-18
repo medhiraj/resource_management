@@ -217,4 +217,58 @@ TEST(ResourceManager, list_Resources)
 
 TEST(ResourceManager, list_all_Resources)
 {
+
+    const unsigned int NUMBER_OF_RESOURCE = 5;
+    const unsigned int NUMBER_OF_USER = 4;
+
+    CResourceManager resource_manager;
+
+    std::string username[] = {"A0", "A1", "A2", "A3", "A4"};
+    InitilizeData(resource_manager, NUMBER_OF_RESOURCE, username, NUMBER_OF_USER);
+
+    std::string resourceId_user[5][4];
+    try
+    {
+        std::list<user_resource_info> listUserResourceInfo = resource_manager.List();
+        EXPECT_EQ(0,listUserResourceInfo.size());
+        for(int i=1 ;i<4 ;i++)
+        {
+            resourceId_user[i][0] = resource_manager.Allocate(username[i]);
+        }
+        listUserResourceInfo = resource_manager.List();
+        EXPECT_EQ(3,listUserResourceInfo.size());
+        std::list<user_resource_info>::iterator itr = listUserResourceInfo.begin();
+        for(int i=1;i<4 && itr!=listUserResourceInfo.end();itr++,i++)
+        {            
+            EXPECT_STREQ((*itr).getUserName().c_str(),username[i].c_str());
+            EXPECT_STREQ((*itr).getResource_ID().c_str(),resourceId_user[i][0].c_str());
+        }
+
+        resourceId_user[3][1] = resource_manager.Allocate(username[3]);
+
+        listUserResourceInfo = resource_manager.List();
+        EXPECT_EQ(4,listUserResourceInfo.size());
+        itr = listUserResourceInfo.begin();
+        for(int i=1;i<4 && itr!=listUserResourceInfo.end();itr++,i++)
+        {            
+            EXPECT_STREQ((*itr).getUserName().c_str(),username[i].c_str());
+            EXPECT_STREQ((*itr).getResource_ID().c_str(),resourceId_user[i][0].c_str());
+            if(i==3)
+            {
+                itr++;
+                EXPECT_STREQ((*itr).getUserName().c_str(),username[i].c_str());
+                EXPECT_STREQ((*itr).getResource_ID().c_str(),resourceId_user[i][1].c_str());
+            }
+        }
+        
+    }
+    catch(const CCustomeexception& e)
+    {
+
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 }
