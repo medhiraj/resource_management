@@ -11,6 +11,8 @@ class user_resource_info
 	std::string resource_id;
 public:
 	user_resource_info(std::string userName, std::string resourceId);
+	std::string getUserName();
+	std::string getResource_ID();
 };
 
 class CResourceManager
