@@ -91,6 +91,7 @@ bool CResourceManager::Deallocate(std::string resource_id)
             }
 
         }
+        else
         {
             throw CCustomeexception("No user is associated with resource id " + resource_id);
         }
